@@ -1,23 +1,10 @@
 #include "shell.h"
 
-
-int main(void)
-{
-	char *myEnv __attribute__((unused));
-
-	myEnv = _getenv("PATH");
-	printf("PATH=%s\n", myEnv);
-
-	myEnv = _getenv("HOME");
-	printf("HOME=%s\n", myEnv);
-
-	myEnv = _getenv("USER");
-	printf("USER=%s\n", myEnv);
-
-	myEnv = _getenv("PASSWORD");
-	printf("PASSWORD=%s\n", myEnv);
-	return (0);
-}
+/**
+ * _getenv - finds and prints the enviroment variable of the PATH
+ * @name: variable PATH to look for
+ * Return: NULL on fail || enviroment variable
+ */
 
 char *_getenv(const char *name)
 {
